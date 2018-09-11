@@ -14,6 +14,8 @@ changeName - to change the name of person
 In the method main() create 5 objects of Person type and input information about them.*/
 
 
+import person.model.Person;
+
 public class Main{
 
     public static void main(String[] args) {

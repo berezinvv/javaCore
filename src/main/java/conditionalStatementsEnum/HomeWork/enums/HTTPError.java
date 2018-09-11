@@ -1,4 +1,4 @@
-package conditionalStatementsEnum.HomeWork;
+package conditionalStatementsEnum.HomeWork.enums;
 
 public enum HTTPError {
     error400("Bad Request"),

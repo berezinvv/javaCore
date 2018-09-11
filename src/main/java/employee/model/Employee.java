@@ -1,4 +1,4 @@
-package employee;
+package employee.model;
 
 public
 class Employee {
@@ -6,6 +6,7 @@ class Employee {
     private String name;
     private float rate;
     private float hours;
+    private int age;
 
     private static float totalHours;
 
@@ -14,10 +15,11 @@ class Employee {
         this.rate = rate;
     }
 
-    public Employee(String name, float rate, float hours) {
+    public Employee(String name, float rate, float hours, int age) {
         this.name = name;
         this.rate = rate;
         this.hours = hours;
+        this.age = age;
         totalHours += hours;
     }
 
@@ -48,10 +50,11 @@ class Employee {
     @Override
     public String toString() {
         return "Employee{" +
-                "name = '" + name + '\'' +
-                ", rate = " + rate +
-                ", hours = " + hours +
-                ", salary = " + salary() +
+                "name='" + name + '\'' +
+                ", rate=" + rate +
+                ", hours=" + hours +
+                ", age=" + age +
+                ", salary=" + salary() +
                 '}';
     }
 
@@ -63,4 +66,11 @@ class Employee {
         return 0;
     }
 
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
 }

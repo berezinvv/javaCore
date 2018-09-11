@@ -14,6 +14,8 @@ changeRating - to change the rating of student
 In the method main() create 3 objects of Student type and input information about them.
 Display the average and total rating of all student.*/
 
+import student.model.Student;
+
 public class Main {
 
     public static void main(String[] args) {

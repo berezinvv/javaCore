@@ -1,4 +1,4 @@
-package conditionalStatementsEnum.PracticalTasks;
+package conditionalStatementsEnum.PracticalTasks.enums;
 
 public enum Continents {
     AFRICA("Algeria,Angola,Benin,Botswana,Burkina,Burundi,Cameroon,Cape Verde,Central African Republic,Chad,Comoros,Congo,Congo, Democratic Republic of,Djibouti,Egypt,quatorial Guinea," +

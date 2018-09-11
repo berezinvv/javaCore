@@ -1,4 +1,6 @@
-package conditionalStatementsEnum.HomeWork;
+package conditionalStatementsEnum.HomeWork.model;
+
+import conditionalStatementsEnum.HomeWork.enums.Breed;
 
 public class Dog {
     private String name;

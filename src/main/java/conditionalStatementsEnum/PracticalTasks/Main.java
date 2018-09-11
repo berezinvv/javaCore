@@ -7,6 +7,12 @@ Create four instances of type Product.
 Display the name and quantity of the most expensive item.
 Display the name of the items, which has the biggest quantity.*/
 
+import conditionalStatementsEnum.PracticalTasks.enums.Continents;
+import conditionalStatementsEnum.PracticalTasks.enums.WeekDaysDE;
+import conditionalStatementsEnum.PracticalTasks.enums.WeekDaysEN;
+import conditionalStatementsEnum.PracticalTasks.enums.WeekDaysFR;
+import conditionalStatementsEnum.PracticalTasks.model.Product;
+
 import java.util.Scanner;
 
 public class Main {

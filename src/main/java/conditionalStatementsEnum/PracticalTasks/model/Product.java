@@ -1,4 +1,4 @@
-package conditionalStatementsEnum.PracticalTasks;
+package conditionalStatementsEnum.PracticalTasks.model;
 
 public class Product {
 

@@ -1,4 +1,4 @@
-package student;
+package student.model;
 
 public class Student {
 

@@ -1,5 +1,9 @@
 package conditionalStatementsEnum.HomeWork;
 
+import conditionalStatementsEnum.HomeWork.enums.Breed;
+import conditionalStatementsEnum.HomeWork.enums.HTTPError;
+import conditionalStatementsEnum.HomeWork.model.Dog;
+
 import java.util.Scanner;
 
 
