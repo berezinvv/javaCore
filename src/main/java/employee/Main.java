@@ -18,6 +18,7 @@ Display the total hours of all workers to screen*/
 /*...... and other tasks*/
 
 import employee.model.Employee;
+import employee.service.EmployeeService;
 
 import java.util.Arrays;
 
@@ -44,47 +45,26 @@ public class Main {
         System.out.println(" - Print unsorted array");
         System.out.println(Arrays.toString(employees));
 
-        Employee tmpByAge;
+        EmployeeService.sortByAge(employees);
 
-        for (int i = 0; i < employees.length - 1; i++) {
-            for (int j = 1; j < employees.length; j++) {
-                if (employees[i].getAge() < employees[j].getAge()) {
-                    tmpByAge = employees[i];
-                    employees[i] = employees[j];
-                    employees[j] = tmpByAge;
-                }
-            }
-        }
-
-        //find min, max, average
-        int minAge = employees[0].getAge(), maxAge = employees[0].getAge(), avrAge = employees[0].getAge();
-        double minSalary = employees[0].salary(), maxSalary = employees[0].salary(), avrSalary = employees[0].salary();
-
-        for (int i = 1; i < employees.length; i++) {
-            if (minAge > employees[i].getAge()) {
-                minAge = employees[i].getAge();
-            }
-            if (maxAge < employees[i].getAge()) {
-                maxAge = employees[i].getAge();
-            }
-            if (minSalary > employees[i].salary()) {
-                minSalary = employees[i].salary();
-            }
-            if (maxSalary < employees[i].salary()) {
-                maxSalary = employees[i].salary();
-            }
-            avrAge += employees[i].getAge();
-            avrSalary += employees[i].salary();
-        }
         System.out.println(" - Print sorted array by age");
         System.out.println(Arrays.toString(employees));
 
-        System.out.println("Minimum age: " + minAge);
-        System.out.println("Maximum age: " + maxAge);
-        System.out.println("Minimum salary: " + minSalary);
-        System.out.println("Maximum salary: " + maxSalary);
-        System.out.println("Average age: " + avrAge / employees.length);
-        System.out.println("Average salary: " + avrSalary / employees.length);
+
+        EmployeeService.sortBySalary(employees);
+
+        System.out.println(" - Print sorted array by salary");
+        System.out.println(Arrays.toString(employees));
+
+
+        //find min, max, average
+
+        System.out.println("Minimum age: " + EmployeeService.findEmployeeMinAge(employees));
+        System.out.println("Maximum age: " + EmployeeService.findEmployeeMaxAge(employees));
+        System.out.println("Minimum salary: " + EmployeeService.findEmployeeMinSalary(employees));
+        System.out.println("Maximum salary: " + EmployeeService.findEmployeeMaxSalary(employees));
+        System.out.println("Average age: " + EmployeeService.findAverageAge(employees));
+        System.out.println("Average salary: " + EmployeeService.findAverageSalary(employees));
     }
 }
 
