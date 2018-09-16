@@ -4,7 +4,7 @@ import employee.model.Employee;
 
 public class EmployeeService {
 
-    public static void sortByAge(Employee [] employees){
+    public void sortByAge(Employee [] employees){
 
         Employee tmpByAge;
         for (int i = 0; i < employees.length - 1; i++) {
@@ -18,7 +18,7 @@ public class EmployeeService {
         }
     }
 
-    public static void sortBySalary(Employee [] employees){
+    public void sortBySalary(Employee [] employees){
 
         Employee tmpByAge;
         for (int i = 0; i < employees.length - 1; i++) {
@@ -32,7 +32,7 @@ public class EmployeeService {
         }
     }
 
-    public static Employee findEmployeeMinAge(Employee [] employees){
+    public Employee findEmployeeMinAge(Employee [] employees){
 
         Employee tmpByAge = employees[0];
         for (int i = 1; i < employees.length; i++) {
@@ -43,7 +43,7 @@ public class EmployeeService {
         return tmpByAge;
     }
 
-    public static Employee findEmployeeMinSalary(Employee [] employees){
+    public Employee findEmployeeMinSalary(Employee [] employees){
 
         Employee tmpByAge = employees[0];
         for (int i = 1; i < employees.length; i++) {
@@ -54,7 +54,7 @@ public class EmployeeService {
         return tmpByAge;
     }
 
-    public static Employee findEmployeeMaxAge(Employee [] employees){
+    public Employee findEmployeeMaxAge(Employee [] employees){
 
         Employee tmpByAge = employees[0];
         for (int i = 1; i < employees.length; i++) {
@@ -65,7 +65,7 @@ public class EmployeeService {
         return tmpByAge;
     }
 
-    public static Employee findEmployeeMaxSalary(Employee [] employees){
+    public Employee findEmployeeMaxSalary(Employee [] employees){
 
         Employee tmpByAge = employees[0];
         for (int i = 1; i < employees.length; i++) {
@@ -76,7 +76,7 @@ public class EmployeeService {
         return tmpByAge;
     }
 
-    public static double findAverageAge(Employee [] employees){
+    public double findAverageAge(Employee [] employees){
 
         int avrAge = 0;
         for (int i = 1; i < employees.length; i++) {
@@ -85,7 +85,7 @@ public class EmployeeService {
         return avrAge / employees.length;
     }
 
-    public static double findAverageSalary(Employee [] employees){
+    public double findAverageSalary(Employee [] employees){
 
         double avrSalary = 0;
         for (int i = 1; i < employees.length; i++) {

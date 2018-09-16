@@ -17,7 +17,10 @@ Display the total hours of all workers to screen*/
 
 /*...... and other tasks*/
 
+import employee.enums.Position;
 import employee.model.Employee;
+import employee.model.OfficeWorker;
+import employee.model.Worker;
 import employee.service.EmployeeService;
 
 import java.util.Arrays;
@@ -25,6 +28,9 @@ import java.util.Arrays;
 public class Main {
 
     public static void main(String[] args) {
+
+        EmployeeService employeeService = new EmployeeService();
+
         Employee Sue = new Employee("Sue", 32, 120, 31);
         Employee Terry = new Employee("Terry", 20, 79, 45);
         Employee Frank = new Employee("Frank", 5, 164, 41);
@@ -45,13 +51,13 @@ public class Main {
         System.out.println(" - Print unsorted array");
         System.out.println(Arrays.toString(employees));
 
-        EmployeeService.sortByAge(employees);
+        employeeService.sortByAge(employees);
 
         System.out.println(" - Print sorted array by age");
         System.out.println(Arrays.toString(employees));
 
 
-        EmployeeService.sortBySalary(employees);
+        employeeService.sortBySalary(employees);
 
         System.out.println(" - Print sorted array by salary");
         System.out.println(Arrays.toString(employees));
@@ -59,12 +65,31 @@ public class Main {
 
         //find min, max, average
 
-        System.out.println("Minimum age: " + EmployeeService.findEmployeeMinAge(employees));
-        System.out.println("Maximum age: " + EmployeeService.findEmployeeMaxAge(employees));
-        System.out.println("Minimum salary: " + EmployeeService.findEmployeeMinSalary(employees));
-        System.out.println("Maximum salary: " + EmployeeService.findEmployeeMaxSalary(employees));
-        System.out.println("Average age: " + EmployeeService.findAverageAge(employees));
-        System.out.println("Average salary: " + EmployeeService.findAverageSalary(employees));
+        System.out.println("Minimum age: " + employeeService.findEmployeeMinAge(employees));
+        System.out.println("Maximum age: " + employeeService.findEmployeeMaxAge(employees));
+        System.out.println("Minimum salary: " + employeeService.findEmployeeMinSalary(employees));
+        System.out.println("Maximum salary: " + employeeService.findEmployeeMaxSalary(employees));
+        System.out.println("Average age: " + employeeService.findAverageAge(employees));
+        System.out.println("Average salary: " + employeeService.findAverageSalary(employees));
+
+
+        //create workers
+        Worker workerLeon = new Worker(Leon);
+        workerLeon.setPos(Position.ELECTRICIAN);
+        System.out.println(workerLeon);
+
+        Worker workerTerry = new Worker(Terry);
+        workerTerry.setPos(Position.CLEANER);
+        System.out.println(workerTerry);
+
+        OfficeWorker officeWorkerMarry = new OfficeWorker(Marry);
+        officeWorkerMarry.setPos(Position.ACCOUNTANT);
+        System.out.println(officeWorkerMarry);
+
+        OfficeWorker officeWorkerFrank = new OfficeWorker(Frank);
+        officeWorkerFrank.setPos(Position.DIRECTOR);
+        System.out.println(officeWorkerFrank);
+
     }
 }
 

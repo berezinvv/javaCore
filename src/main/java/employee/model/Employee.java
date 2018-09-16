@@ -23,6 +23,14 @@ class Employee {
         totalHours += hours;
     }
 
+    public Employee(Employee employee) {
+        this.name = employee.getName();
+        this.rate = employee.getRate();
+        this.hours = employee.getHours();
+        this.age = employee.getAge();
+        totalHours += hours;
+    }
+
     public String getName() {
         return name;
     }
